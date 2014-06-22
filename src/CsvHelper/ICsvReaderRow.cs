@@ -48,6 +48,14 @@ namespace CsvHelper
 		/// <returns>The raw field.</returns>
 		string this[string name, int index] { get; }
 
+
+        /// <summary>
+        /// Gets the raw field at position (column) name.
+        /// </summary>
+        /// <param name="name">The named index of the field.</param>
+        /// <returns>The raw field.</returns>
+        int GetFieldCount(string name);
+
 		/// <summary>
 		/// Gets the raw field at position (column) index.
 		/// </summary>

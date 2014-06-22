@@ -244,6 +244,23 @@ namespace CsvHelper
 			}
 		}
 
+        /// <summary>
+        /// Gets the field count form column name.
+        /// </summary>
+        /// <param name="name">The named index of the field.</param>
+        /// <returns>The field count.</returns>
+        public virtual int GetFieldCount(string name)
+        {
+            if (namedIndexes.Keys.Contains(name))
+            {
+                return namedIndexes[name].Count;
+            }
+            else
+            {
+                return 0;
+            }
+        }
+
 		/// <summary>
 		/// Gets the raw field at position (column) index.
 		/// </summary>
